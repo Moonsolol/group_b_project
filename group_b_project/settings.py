@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login_screen.apps.LoginScreenConfig',
-    'crispy_forms'
+    'crispy_forms',
+    'Main_app.apps.MainAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'group_b_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,9 +80,9 @@ WSGI_APPLICATION = 'group_b_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'group_b_site',
+        'NAME': 'newproject',
         'USER': 'root',
-        'PASSWORD':'12345',
+        'PASSWORD': 'MS_A900135mmjon85514',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
